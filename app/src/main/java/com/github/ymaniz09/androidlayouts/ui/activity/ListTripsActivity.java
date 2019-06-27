@@ -15,6 +15,12 @@ public class ListTripsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_trips);
 
+        setTitle(getString(R.string.list_trips_activity_title));
+
+        setupListView();
+    }
+
+    private void setupListView() {
         ListView listView = findViewById(R.id.list_trips_list_view);
 
         listView.setAdapter(new ListTripAdapter(new TripDAO().getMock(), this));

@@ -3,4 +3,12 @@
     <string name="top_featured_title">Top featured</string>
     <string name="selected_country">Brazil</string>
     <string name="header_background_color">header background color</string>
+    <string name="destination_image">Landscape image of the target destination</string>
+
+    <plurals name="numberOfDays">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+
+    <string name="list_trips_activity_title">Choose your destination</string>
 </resources>
