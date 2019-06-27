@@ -1,7 +1,6 @@
 package com.github.ymaniz09.androidlayouts.ui.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +10,11 @@ import android.widget.TextView;
 
 import com.github.ymaniz09.androidlayouts.R;
 import com.github.ymaniz09.androidlayouts.model.Trip;
+import com.github.ymaniz09.androidlayouts.util.FormattingUtil;
+import com.github.ymaniz09.androidlayouts.util.PluralUtil;
+import com.github.ymaniz09.androidlayouts.util.ResourcesUtil;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.List;
-import java.util.Locale;
 
 public class ListTripAdapter extends BaseAdapter {
 
@@ -66,26 +65,18 @@ public class ListTripAdapter extends BaseAdapter {
     }
 
     private void setPrice(View view, Trip trip) {
-        NumberFormat currencyInstance = DecimalFormat.getCurrencyInstance(
-                new Locale("en", "US"));
         TextView price = view.findViewById(R.id.item_price);
-        price.setText(currencyInstance.format(trip.getValue()).replace("$", "$ "));
+        price.setText(FormattingUtil.formatBigDecimalToUSCurrency(trip.getValue()));
     }
 
     private void setDays(View view, Trip trip) {
-        Resources resources = mContext.getResources();
-        int daysAmount = trip.getDays();
         TextView days = view.findViewById(R.id.item_destination_days);
-        days.setText(resources.getQuantityString(R.plurals.numberOfDays, daysAmount, daysAmount));
+        days.setText(PluralUtil.getPlural(mContext, trip.getDays(), R.plurals.numberOfDays));
     }
 
     private void setImage(View view, Trip trip) {
         ImageView image = view.findViewById(R.id.item_destination_image);
-        Resources resources = mContext.getResources();
-        int drawableId = resources
-                .getIdentifier(trip.getImage(), "drawable", mContext.getPackageName());
-
-        image.setImageDrawable(mContext.getDrawable(drawableId));
+        image.setImageDrawable(ResourcesUtil.getDrawable(mContext, trip.getImage()));
     }
 
     private void setPlace(View view, Trip trip) {

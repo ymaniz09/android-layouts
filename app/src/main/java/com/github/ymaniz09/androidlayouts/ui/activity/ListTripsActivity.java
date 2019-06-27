@@ -1,5 +1,6 @@
 package com.github.ymaniz09.androidlayouts.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -18,6 +19,8 @@ public class ListTripsActivity extends AppCompatActivity {
         setTitle(getString(R.string.list_trips_activity_title));
 
         setupListView();
+
+        startActivity(new Intent(this, TripDetailsActivity.class));
     }
 
     private void setupListView() {
