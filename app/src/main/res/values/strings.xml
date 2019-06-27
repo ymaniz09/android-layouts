@@ -14,4 +14,5 @@
     <string name="title_activity_trip_details">TripDetailsActivity</string>
     <string name="trip_details_special_offer">Special offer:</string>
     <string name="trip_details_buy_it_button_text">Buy it!</string>
+    <string name="trip_details_activity_title">Choose this offer</string>
 </resources>
