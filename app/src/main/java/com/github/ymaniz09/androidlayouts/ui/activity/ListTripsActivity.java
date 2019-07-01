@@ -20,7 +20,7 @@ public class ListTripsActivity extends AppCompatActivity {
 
         setupListView();
 
-        startActivity(new Intent(this, TripDetailsActivity.class));
+        startActivity(new Intent(this, PaymentActivity.class));
     }
 
     private void setupListView() {

@@ -15,4 +15,14 @@
     <string name="trip_details_special_offer">Special offer:</string>
     <string name="trip_details_buy_it_button_text">Buy it!</string>
     <string name="trip_details_activity_title">Choose this offer</string>
+    <string name="activity_payment_help_text">Enter you credit card details to buy this awesome trip</string>
+    <string name="activity_payment_total_text">Total:</string>
+    <string name="activity_payment_payment_button_text">Confirm</string>
+    <string name="activity_payment_card_name_hint">Bill Asgard</string>
+    <string name="activity_payment_cvc_hint">CVC</string>
+    <string name="activity_payment_yy_hint">YY</string>
+    <string name="activity_payment_mm_hint">MM</string>
+    <string name="activity_payment_credit_card_number_hint">1256 8987 8945 1456</string>
+    <string name="activity_payment_title">Payment</string>
+    <string name="allowed_chars_mask">abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ\u0020</string>
 </resources>
