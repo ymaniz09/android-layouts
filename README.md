@@ -7,4 +7,5 @@
 
 ### Code based on:
 [Curso de Layouts Android parte 1: Criando telas com Constraint Layouts](https://cursos.alura.com.br/course/layout-android-1) available @ Alura
+
 [Curso de Layouts Android parte 2: Boas práticas para criação de telas](https://cursos.alura.com.br/course/layout-android-2) available @ Alura
