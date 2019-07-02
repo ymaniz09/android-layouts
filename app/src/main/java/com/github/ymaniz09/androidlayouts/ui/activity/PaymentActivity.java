@@ -3,13 +3,12 @@ package com.github.ymaniz09.androidlayouts.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.github.ymaniz09.androidlayouts.R;
 import com.github.ymaniz09.androidlayouts.model.Trip;
 import com.github.ymaniz09.androidlayouts.util.FormattingUtil;
-
-import java.math.BigDecimal;
 
 public class PaymentActivity extends AppCompatActivity {
 
@@ -20,16 +19,30 @@ public class PaymentActivity extends AppCompatActivity {
 
         setTitle(R.string.activity_payment_title);
 
-        Trip trip = new Trip("São Paulo", "sap_paulo_sp", 2, new BigDecimal(243.99));
+        Bundle extras = getIntent().getExtras();
 
-        setPrice(trip);
+        if (extras != null && extras.containsKey(ListTripsActivity.PACKAGE_EXTRA_TRIP)) {
+            final Trip trip = extras.getParcelable(ListTripsActivity.PACKAGE_EXTRA_TRIP);
 
-        startActivity(new Intent(this, PurchaseDetailsActivity.class));
+            if (trip != null) {
+                setPrice(trip);
+                setBuyItButtonOnClickListener(trip);
+            }
+        }
+    }
 
+    private void setBuyItButtonOnClickListener(final Trip trip) {
+        Button buyItButton = findViewById(R.id.activity_payment_confirm_payment_button);
+        buyItButton.setOnClickListener(v -> {
+            Intent launchIntent =
+                    new Intent(PaymentActivity.this, PurchaseDetailsActivity.class);
+            launchIntent.putExtra(ListTripsActivity.PACKAGE_EXTRA_TRIP, trip);
+            startActivity(launchIntent);
+        });
     }
 
     private void setPrice(Trip trip) {
-        TextView price = findViewById(R.id.payment_total_value);
+        TextView price = findViewById(R.id.activity_payment_total_value);
         price.setText(FormattingUtil.formatBigDecimalToUSCurrency(trip.getValue()));
     }
 }

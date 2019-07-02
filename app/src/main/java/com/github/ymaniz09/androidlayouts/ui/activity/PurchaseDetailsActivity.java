@@ -10,7 +10,6 @@ import com.github.ymaniz09.androidlayouts.model.Trip;
 import com.github.ymaniz09.androidlayouts.util.FormattingUtil;
 import com.github.ymaniz09.androidlayouts.util.ResourcesUtil;
 
-import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
 public class PurchaseDetailsActivity extends AppCompatActivity {
@@ -22,29 +21,32 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
 
         setTitle(R.string.activity_purchase_details_title);
 
-        Trip trip = new Trip("São Paulo", "sao_paulo_sp", 2, new BigDecimal(243.99));
+        Bundle extras = getIntent().getExtras();
 
-        setPlace(trip);
+        if (extras != null && extras.containsKey(ListTripsActivity.PACKAGE_EXTRA_TRIP)) {
+            final Trip trip = extras.getParcelable(ListTripsActivity.PACKAGE_EXTRA_TRIP);
 
-        setImage(trip);
-
-        setDates();
-
-        setPrice(trip);
+            if (trip != null) {
+                setPlace(trip);
+                setImage(trip);
+                setDates();
+                setPrice(trip);
+            }
+        }
     }
 
     private void setPlace(Trip trip) {
-        TextView place = findViewById(R.id.purchase_details_trip_destination);
+        TextView place = findViewById(R.id.activity_purchase_details_trip_destination);
         place.setText(trip.getPlace());
     }
 
     private void setImage(Trip trip) {
-        ImageView image = findViewById(R.id.purchase_details_trip_image);
+        ImageView image = findViewById(R.id.activity_purchase_details_trip_image);
         image.setImageDrawable(ResourcesUtil.getDrawable(this, trip.getImage()));
     }
 
     private void setDates() {
-        TextView dates = findViewById(R.id.purchase_details_trip_dates);
+        TextView dates = findViewById(R.id.activity_purchase_details_trip_dates);
         OffsetDateTime now = OffsetDateTime.now();
         dates.setText(String.format("%s/%s/%s - %s/%s/%s",
                 now.getYear(), now.getMonthValue(), now.getDayOfMonth(),
@@ -52,7 +54,7 @@ public class PurchaseDetailsActivity extends AppCompatActivity {
     }
 
     private void setPrice(Trip trip) {
-        TextView price = findViewById(R.id.purchase_details_trip_price);
+        TextView price = findViewById(R.id.activity_purchase_details_trip_price);
         price.setText(FormattingUtil.formatBigDecimalToUSCurrency(trip.getValue()));
     }
 }

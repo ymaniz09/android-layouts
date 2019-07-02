@@ -7,7 +7,7 @@
     tools:context=".ui.activity.PaymentActivity">
 
     <TextView
-        android:id="@+id/payment_help_text"
+        android:id="@+id/activity_payment_help_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/payment_total_text"
+        android:id="@+id/activity_payment_total_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,21 +29,21 @@
         android:layout_marginTop="20dp"
         android:text="@string/activity_payment_total_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payment_help_text" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_payment_help_text" />
 
     <TextView
-        android:id="@+id/payment_total_value"
+        android:id="@+id/activity_payment_total_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/payment_total_text"
-        app:layout_constraintTop_toBottomOf="@+id/payment_total_text"
+        app:layout_constraintStart_toStartOf="@+id/activity_payment_total_text"
+        app:layout_constraintTop_toBottomOf="@+id/activity_payment_total_text"
         tools:text="$ 42.98" />
 
     <EditText
-        android:id="@+id/payment_credit_card_number"
+        android:id="@+id/activity_payment_credit_card_number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -52,21 +52,21 @@
         android:maxLength="16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payment_total_value" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_payment_total_value" />
 
     <EditText
-        android:id="@+id/payment_credit_card_number_month"
+        android:id="@+id/activity_payment_credit_card_number_month"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:hint="@string/activity_payment_mm_hint"
         android:inputType="number"
         android:maxLength="2"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/payment_credit_card_cvc"
-        app:layout_constraintStart_toStartOf="@id/payment_credit_card_number" />
+        app:layout_constraintBottom_toBottomOf="@+id/activity_payment_credit_card_cvc"
+        app:layout_constraintStart_toStartOf="@id/activity_payment_credit_card_number" />
 
     <EditText
-        android:id="@+id/payment_credit_card_number_year"
+        android:id="@+id/activity_payment_credit_card_number_year"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -74,11 +74,11 @@
         android:inputType="number"
         android:maxLength="2"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/payment_credit_card_cvc"
-        app:layout_constraintStart_toEndOf="@id/payment_credit_card_number_month" />
+        app:layout_constraintBottom_toBottomOf="@+id/activity_payment_credit_card_cvc"
+        app:layout_constraintStart_toEndOf="@id/activity_payment_credit_card_number_month" />
 
     <EditText
-        android:id="@+id/payment_credit_card_cvc"
+        android:id="@+id/activity_payment_credit_card_cvc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_cvc_cartao_de_credito"
@@ -87,30 +87,30 @@
         android:maxLength="3"
         android:textAlignment="center"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintEnd_toEndOf="@id/payment_credit_card_number"
-        app:layout_constraintTop_toBottomOf="@id/payment_credit_card_number" />
+        app:layout_constraintEnd_toEndOf="@id/activity_payment_credit_card_number"
+        app:layout_constraintTop_toBottomOf="@id/activity_payment_credit_card_number" />
 
     <EditText
-        android:id="@+id/payment_credit_card_name"
+        android:id="@+id/activity_payment_credit_card_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         android:hint="@string/activity_payment_card_name_hint"
         android:inputType="text"
-        android:digits="@string/allowed_chars_mask"
-        app:layout_constraintEnd_toEndOf="@id/payment_credit_card_cvc"
-        app:layout_constraintStart_toStartOf="@id/payment_credit_card_number_month"
-        app:layout_constraintTop_toBottomOf="@id/payment_credit_card_cvc" />
+        android:digits="@string/activity_payment_allowed_chars_mask"
+        app:layout_constraintEnd_toEndOf="@id/activity_payment_credit_card_cvc"
+        app:layout_constraintStart_toStartOf="@id/activity_payment_credit_card_number_month"
+        app:layout_constraintTop_toBottomOf="@id/activity_payment_credit_card_cvc" />
 
     <Button
-        android:id="@+id/payment_button"
+        android:id="@+id/activity_payment_confirm_payment_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/orange_rounded_button"
         android:text="@string/activity_payment_payment_button_text"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/payment_credit_card_name"
-        app:layout_constraintStart_toStartOf="@id/payment_credit_card_name"
-        app:layout_constraintTop_toBottomOf="@+id/payment_credit_card_name" />
+        app:layout_constraintEnd_toEndOf="@+id/activity_payment_credit_card_name"
+        app:layout_constraintStart_toStartOf="@id/activity_payment_credit_card_name"
+        app:layout_constraintTop_toBottomOf="@+id/activity_payment_credit_card_name" />
 </android.support.constraint.ConstraintLayout>

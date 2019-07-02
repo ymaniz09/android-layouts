@@ -3,17 +3,17 @@
     <string name="top_featured_title">Top featured</string>
     <string name="selected_country">Brazil</string>
     <string name="header_background_color">header background color</string>
-    <string name="destination_image">Landscape image of the target destination</string>
+    <string name="activity_trip_details_destination_image">Landscape image of the target destination</string>
 
     <plurals name="numberOfDays">
         <item quantity="one">%d day</item>
         <item quantity="other">%d days</item>
     </plurals>
 
-    <string name="list_trips_activity_title">Choose your destination</string>
-    <string name="trip_details_special_offer">Special offer:</string>
-    <string name="trip_details_buy_it_button_text">Buy it!</string>
-    <string name="trip_details_activity_title">Choose this offer</string>
+    <string name="activity_list_trips_title">Choose your destination</string>
+    <string name="activity_trip_details_special_offer">Special offer:</string>
+    <string name="activity_trip_details_buy_it_button_text">Buy it!</string>
+    <string name="activity_trip_details_title">Choose this offer</string>
     <string name="activity_payment_help_text">Enter you credit card details to buy this awesome trip</string>
     <string name="activity_payment_total_text">Total:</string>
     <string name="activity_payment_payment_button_text">Confirm</string>
@@ -23,11 +23,11 @@
     <string name="activity_payment_mm_hint">MM</string>
     <string name="activity_payment_credit_card_number_hint">1256 8987 8945 1456</string>
     <string name="activity_payment_title">Payment</string>
-    <string name="allowed_chars_mask">abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ\u0020</string>
+    <string name="activity_payment_allowed_chars_mask">abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ\u0020</string>
     <string name="activity_purchase_details_title">Purchase Details</string>
-    <string name="purchase_details_congratulations_title">Congratulations!</string>
-    <string name="purchase_details_you_successfully_bought_you_trip">You successfully bought you trip! =)</string>
-    <string name="purchase_details_check_your_new_trip">Check your new trip:</string>
-    <string name="purchase_details_solid_color_header">Solid color header</string>
-    <string name="purchase_details_landscape_of_your_destination">Landscape of your destination</string>
+    <string name="activity_purchase_details_congratulations_title">Congratulations!</string>
+    <string name="activity_purchase_details_you_successfully_bought_you_trip">You successfully bought you trip! =)</string>
+    <string name="activity_purchase_details_check_your_new_trip">Check your new trip:</string>
+    <string name="activity_purchase_details_solid_color_header">Solid color header</string>
+    <string name="activity_purchase_details_landscape_of_your_destination">Landscape of your destination</string>
 </resources>
