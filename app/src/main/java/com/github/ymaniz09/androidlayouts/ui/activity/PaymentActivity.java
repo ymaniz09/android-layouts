@@ -1,5 +1,6 @@
 package com.github.ymaniz09.androidlayouts.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ public class PaymentActivity extends AppCompatActivity {
         Trip trip = new Trip("São Paulo", "sap_paulo_sp", 2, new BigDecimal(243.99));
 
         setPrice(trip);
+
+        startActivity(new Intent(this, PurchaseDetailsActivity.class));
 
     }
 

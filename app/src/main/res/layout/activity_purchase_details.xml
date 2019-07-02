@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PurchaseDetailsActivity">
+
+    <ImageView
+        android:id="@+id/purchase_details_header"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/purchase_details_solid_color_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:id="@+id/purchase_details_congratulations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/purchase_details_congratulations_title"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purchase_details_header"
+        app:layout_constraintEnd_toEndOf="@+id/purchase_details_header"
+        app:layout_constraintStart_toStartOf="@+id/purchase_details_header"
+        app:layout_constraintTop_toTopOf="@+id/purchase_details_header"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/purchase_details_purchase_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/purchase_details_you_successfully_bought_you_trip"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/purchase_details_header"
+        app:layout_constraintEnd_toEndOf="@+id/purchase_details_header"
+        app:layout_constraintStart_toStartOf="@+id/purchase_details_header"
+        app:layout_constraintTop_toBottomOf="@+id/purchase_details_congratulations" />
+
+    <TextView
+        android:id="@+id/purchase_details_check_your_trip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/purchase_details_check_your_new_trip"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchase_details_header" />
+
+    <ImageView
+        android:id="@+id/purchase_details_trip_image"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/purchase_details_landscape_of_your_destination"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchase_details_check_your_trip_text"
+        tools:srcCompat="@drawable/sao_paulo_sp" />
+
+    <TextView
+        android:id="@+id/purchase_details_trip_destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchase_details_trip_image"
+        tools:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/purchase_details_trip_dates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/purchase_details_trip_destination"
+        app:layout_constraintTop_toBottomOf="@+id/purchase_details_trip_destination"
+        tools:text="08/12/2019  - 10/12/2019" />
+
+    <TextView
+        android:id="@+id/purchase_details_trip_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/purchase_details_trip_dates"
+        app:layout_constraintTop_toBottomOf="@+id/purchase_details_trip_dates"
+        tools:text="$ 243.99" />
+</android.support.constraint.ConstraintLayout>

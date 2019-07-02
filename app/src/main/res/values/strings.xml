@@ -11,7 +11,6 @@
     </plurals>
 
     <string name="list_trips_activity_title">Choose your destination</string>
-    <string name="title_activity_trip_details">TripDetailsActivity</string>
     <string name="trip_details_special_offer">Special offer:</string>
     <string name="trip_details_buy_it_button_text">Buy it!</string>
     <string name="trip_details_activity_title">Choose this offer</string>
@@ -25,4 +24,10 @@
     <string name="activity_payment_credit_card_number_hint">1256 8987 8945 1456</string>
     <string name="activity_payment_title">Payment</string>
     <string name="allowed_chars_mask">abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ\u0020</string>
+    <string name="activity_purchase_details_title">Purchase Details</string>
+    <string name="purchase_details_congratulations_title">Congratulations!</string>
+    <string name="purchase_details_you_successfully_bought_you_trip">You successfully bought you trip! =)</string>
+    <string name="purchase_details_check_your_new_trip">Check your new trip:</string>
+    <string name="purchase_details_solid_color_header">Solid color header</string>
+    <string name="purchase_details_landscape_of_your_destination">Landscape of your destination</string>
 </resources>
